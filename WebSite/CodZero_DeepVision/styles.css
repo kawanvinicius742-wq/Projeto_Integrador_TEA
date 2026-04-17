@@ -1,0 +1,103 @@
+/*
+Uso do "CLASS"
+Pode ser usada várias vezes
+Serve para reutilizar estilo
+Mais usada no dia a dia
+*/
+
+/*
+Uso do "ID"
+Deve ser único na página
+Identifica um elemento específico
+*/
+
+/* ! HEADER ! CABEÇALHO !*/
+/* NAVBAR */
+.nav {
+  display: flex; /* coloca tudo em linha */
+  justify-content: space-around; /* logo esquerda, menu direita */
+  align-items: center; /* alinha vertical */
+  padding: 20px 60px;
+  background: #140042;
+}
+
+/* LOGO */
+.logo {
+  color: #b870ff;
+  font-size: 24px;
+  height: 40px; /* controla o tamanho da logo */
+}
+
+/* MENU */
+.menu {
+  display: flex; /* deixa links lado a lado */
+  gap: 30px; /* espaço entre eles */
+  list-style: none; /* remove bolinhas da frente do "li"*/
+}
+
+/* LINKS */
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.menu a:hover {
+  color: #9c3cfb;
+}
+
+/* ! ACIMA APENAS HEADER / CABEÇALHO (FECHADO) ! */
+
+/* FOOTER */
+.footer {
+  background: #0b0b1a; /* fundo escuro */
+  padding: 40px 20px; /* espaço interno */
+  text-align: center; /* centraliza tudo */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* linha superior */
+}
+
+/* CONTEÚDO INTERNO */
+.footer-content {
+  max-width: 800px; /* limita largura */
+  margin: 0 auto; /* centraliza */
+  display: flex; /* coloca os elementos lado a lado */
+  justify-content: space-between; /* distribui espaço */
+  align-items: center; /* alinha verticalmente */
+  padding: 40px;
+}
+
+/* LOGO TEXTO */
+.footer-logo {
+  color: #b870ff; /* cor da identidade */
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.footer-text {
+  color: #ccc; /* cor mais suave */
+  margin-bottom: 15px;
+}
+
+/* COPYRIGHT */
+.footer-copy {
+  color: #777; /* mais discreto */
+  font-size: 14px;
+}
+
+.social {
+    display: flex; /* deixa os ícones lado a lado */
+    gap: 15px; /* espaço entre eles */
+}
+
+.social img {
+    height: 24px; /* tamanho dos ícones */
+    cursor: pointer; /* cursor de clique */
+    transition: 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.1); /* leve aumento ao passar o mouse */
+}
