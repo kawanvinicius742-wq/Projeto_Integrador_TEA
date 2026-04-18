@@ -17,7 +17,7 @@ Identifica um elemento específico.
 /* NAVBAR */
 .nav {
   display: flex; /* coloca tudo em linha */
-  justify-content: space-around; /* logo esquerda, menu direita */
+  justify-content: space-between; /* logo esquerda, menu direita */
   align-items: center; /* alinha vertical */
   padding: 20px 60px;
   border-bottom: 0.5px solid #9c3cfb;
@@ -37,6 +37,7 @@ Identifica um elemento específico.
   height: 40px; /* controla o tamanho da logo */
 }
 
+/* .menu é a classe da tag "ul" que está dentro das tags "header" e "nav" */
 /* MENU / Inicio - Sobre - Projetos - Equipe - Contato*/
 .menu {
   display: flex; /* deixa links lado a lado */
@@ -45,7 +46,6 @@ Identifica um elemento específico.
 }
 
 /* LINKS */
-/* .menu é a classe da tag"ul" que está dentro das tags "header" e "nav" */
 .menu a {
   text-decoration: none;
   color: white;
@@ -74,18 +74,6 @@ Identifica um elemento específico.
   padding: 135px;
 }
 
-.main {
-  color: azure;
-  background-color: #09011d;
-  padding: 125px;
-
-  /* display: flex; põe os ELEMENTOS LADO A LADO */
-  display: flex;
-
-  /* gap: 20px; da espaçamento entre os elementos */
-  gap: 20px;
-}
-
 .btn {
   width: 200px; /* largura fixa (padroniza todos) */
   height: 50px; /* altura fixa */
@@ -107,8 +95,6 @@ Identifica um elemento específico.
 }
 
 .btn:hover {
-  /*background-color: #000000;*/
-
   /* "color" indica a cor do texto dentro do botão. */
   color: #fff;
   /* "transform" aumenta ou diminui o tamanho do botão ao posicionar seta em cima. scale(1) é o padrão e não altera nada! */
@@ -117,17 +103,45 @@ Identifica um elemento específico.
   box-shadow: 0 8px 16px rgba(8, 0, 13, 0.5);
 }
 
-.login-btn {
-  width: 100px; 
+.btnLogin {
+  width: 100px;
   height: 40px;
 
   border: 1px solid #9c3cfb;
   color: #9c3cfb;
   background: transparent;
+  cursor: pointer;
 }
 
 /* HOVER */
-.login-btn:hover {
+.btnLogin:hover {
+  background: #9c3cfb;
+  color: white;
+}
+
+.btnCadastro {
+  width: 100px;
+  height: 40px;
+
+  /* Está impedindo o botao cadastro de aumentar */
+  box-sizing: border-box;
+
+  text-decoration: none; /* REMOVE sublinhado do link */
+  text-align: center;
+  display: inline-flex; /* permite centralizar conteúdo */
+
+  /* align-itens colocou o texto exatamente no centro do botão */
+  align-items: center;
+  justify-content: center; /* centraliza horizontal */
+
+  border: 1px solid #9c3cfb;
+  color: #9c3cfb;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* HOVER */
+.btnCadastro:hover {
   background: #9c3cfb;
   color: white;
 }
@@ -138,10 +152,203 @@ Identifica um elemento específico.
   gap: 10px; /* espaço entre os botões */
 }
 
+/*  */
+
+/* MODAL é uma janela temporária (Ex: Login e Cadatro) que impede o usuário de interagir com a página enquanto não tomar uma ação*/
+/* FUNDO ESCURO (overlay) */
+.modal {
+  display: none; /* começa escondido */
+}
+
+#cadastro:target {
+  display: block;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.75); /* escurece fundo */
+  backdrop-filter: blur(5px); /* leve blur */
+}
+
+
+/* Possível inserção de Java Script futuramente. */
+/* CAIXA DO MODAL */
+.cad{
+  margin: 10px;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 320px;
+  padding: 25px;
+
+  /* Fundo da janela de CADASTRO */
+  background: linear-gradient(145deg, #140042, #2d013e);
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* TÍTULO */
+.modal-content h2 {
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+/* INPUTS */
+.modal-content input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background: rgba(165, 0, 0, 0.05);
+  color: white;
+
+  outline: none;
+  transition: 0.2s;
+}
+
+/* FOCO */
+.modal-content input:focus {
+  border-color: #9c3cfb;
+  box-shadow: 0 0 8px rgba(156, 60, 251, 0.5);
+}
+
+/* BOTÃO */
+.modal-content .btn {
+  width: 100%; /* ocupa toda largura */
+  height: 45px;
+  margin-top: 20px;
+}
+
+/* BOTÃO FECHAR */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* HOVER FECHAR */
+.close:hover {
+  color: #9c3cfb;
+}
+
 /* ! ACIMA APENAS HEADER / CABEÇALHO (FECHADO) ! */
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 
+/* ! MAIN ! CONTEÚDO PRINCIPAL */
+
+/* 1º Seção / Section */
+.main1section {
+  color: azure;
+  padding: 125px;
+
+  align-items: center;
+
+  /* display: flex; põe os ELEMENTOS LADO A LADO */
+  display: flex;
+
+  /* gap: 20px; da espaçamento entre os elementos */
+  gap: 20px;
+
+  background: linear-gradient(
+    90deg,
+    /* ângulo horizontal */ #14033a 0%,
+    /* início */ #140128 50%,
+    /* meio (roxo destaque) */ #052754 100% /* fim (azul) */
+  );
+}
+
+/* IMAGEM */
+.main1section img {
+  width: 77px; /* controla tamanho */
+  height: 77px;
+}
+
+/* BLOCO DE TEXTO */
+.textSobre {
+  max-width: 500px; /* limita largura do texto */
+}
+
+/* TÍTULOS */
+.textSobre h1 {
+  margin-bottom: 10px;
+}
+
+/* AGRUPA ÍCONE + TÍTULO */
+.titulo-bloco {
+  display: flex; /* coloca lado a lado */
+  align-items: center; /* alinha verticalmente */
+  gap: 10px; /* espaço entre ícone e texto */
+  margin-bottom: 10px;
+}
+
+/* TAMANHO PADRÃO DOS ÍCONES */
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* remove margens padrão do h1 */
+.titulo-bloco h1 {
+  margin: 0;
+}
+
+.textProjeto {
+  border-left: 1px solid rgba(255, 255, 255, 0.2); /* linha vertical */
+  padding-left: 30px; /* afasta o texto da linha */
+}
+
+/* PARÁGRAFOS */
+.textSobre p {
+  margin-bottom: 30px;
+  line-height: 1.5; /* melhora leitura */
+}
+
+/* BLOCO DE TEXTO */
+.textProjeto {
+  max-width: 500px; /* limita largura do texto */
+}
+
+/* TÍTULOS */
+.textProjeto h1 {
+  margin-bottom: 10px;
+}
+
+/* PARÁGRAFOS */
+.textProjeto p {
+  margin-bottom: 30px;
+  line-height: 1.5; /* melhora leitura */
+}
+
+/* 2º Seção / Section */
+
+/* 3º Seção / Section */
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
 /* ! FOOTER ! RODAPÉ ! */
 .footer {
   background: #0b0b1a; /* fundo escuro */

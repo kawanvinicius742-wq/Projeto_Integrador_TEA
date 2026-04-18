@@ -1,4 +1,4 @@
-<!-- Comentários acima da tag referenciada - Kawan-->
+<!-- Comentários estão acima da tag referenciada. - Kawan-->
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -10,16 +10,15 @@
 
   <!----------------------------------------------------------------------------------------------------------------------------------->
 
+  <!-- Tag <BODY> se refere ao corpo principal do site, sua estrutura visível como um todo. -->
   <body>
-    <!-- Tag <HEADER> diz para página que ali dentro contém um CABEÇALHO | SEMÂNTICO-->
+    <div id="topo"></div>
+    <!-- Tag <HEADER> diz para página que ali dentro contém um CABEÇALHO | SEMÂNTICA-->
     <header>
-      <!-- Tag <NAV> diz para o navegador "Aqui tem NAVegação / LINKS" | SEMÂNTICO-->
+      <!-- Tag <NAV> diz para o navegador "Aqui tem NAVegação / LINKS" | SEMÂNTICA-->
       <nav class="nav">
-        <!-- <h1 class="logo">Deep Vision</h1> = Provisório -->
         <!-- LOGO COMO IMAGEM -->
         <img src="/Logo.png" alt="Deep Vision" class="logo" />
-
-        <!-- Tag <DIV> agrupa elementos, serve como "container" | NÃO SEMÂNTICO -->
 
         <ul class="menu">
           <li><a href="#">Início</a></li>
@@ -28,91 +27,97 @@
           <li><a href="#">Equipe</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
+
+        <!-- Tag <DIV> agrupa elementos, serve como "container" | NÃO SEMÂNTICA -->
+
         <div class="login-cadastro-grupo">
           <!-- BOTÃO DE LOGIN -->
-          <button class="btn login-btn">Login</button>
+          <button class="btnLogin">Login</button>
           <!-- BOTÃO DE CADASTRO -->
-          <button class="btn login-btn">Cadastro</button>
+          <a href="#cadastro" class="btnCadastro">Cadastrar</a>
+          <!-- <button href="#cadastro"class="btnCadastro">Cadastro</button> -->
         </div>
       </nav>
+
+      <!-- Tag <SECTION> divide o conteúdo em *BLOCOS* "temáticos", parte independente que se relaciona com o contexto da página. | SEMÂNTICA-->
+      <section class="downHeader">
+        <h1>
+          <strong id="format">Deep</strong>Vision <br />
+          Inteligência Artificial
+          <br />
+          que <strong id="format">enxerga além! </strong>
+        </h1>
+
+        <p>
+          Desenvolvemos soluções inteligentes com visão computacional
+          <br />
+          para tranformar dados em impacto real
+        </p>
+
+        <br /><br />
+        <button class="btn" type="checkbox" placeholder="Conheça o projeto">
+          Conheça o projeto
+        </button>
+        <button class="btn" type="checkbox" placeholder="">Nossa equipe</button>
+      </section>
     </header>
 
     <!------------------------------------------------------------------------------------------------------------------------------------------------>
 
-    <!-- <hr /> -->
-    <section class="downHeader">
-      <h1>
-        <strong id="format">Deep</strong>Vision <br />
-        Inteligência Artificial
-        <br />
-        que <strong id="format">enxerga além! </strong>
-      </h1>
-
-      <p>
-        Desenvolvemos soluções inteligentes com visão computacional
-        <br />
-        para tranformar dados em impacto real
-      </p>
-
-      <br /><br />
-      <button class="btn" type="checkbox" placeholder="Conheça o projeto">
-        Conheça o projeto
-      </button>
-      <button class="btn" type="checkbox" placeholder="">Nossa equipe</button>
-    </section>
     <main>
-      <section class="main">
-        <img src="/images_icon/Group 28.png" alt="nos" />
+      <!-- Abaixo encontra-se uma seção que diz sobre a EQUIPE e alguns dos nossos PROJETOS. -->
+      <section class="main1section">
+        <div class="textSobre">
+          <div class="titulo-bloco">
+            <img src="/images_icon/Group 28.png" alt="nos" />
+            <h1>Sobre nós</h1>
+          </div>
+          <p>
+            Somos a Deep Vision, uma equipe dedicada ao desenvolvimento <br />
+            de soluções inovadoras em Inteligência Artificial e Visão
+            Computacional, <br />Nosso objetivo é criar tecnologias que gerem
+            impacto positivo na sociedade.
+          </p>
+        </div>
 
-        <h1>Sobre nós</h1>
-        <p>
-          Somos a Deep Vision, uma equipe dedicada ao desenvolvimento <br />
-          de soluções inovadoras em Inteligência Artificial e Visão
-          Computacional, <br />Nosso objetivo é criar tecnologias que gerem
-          impacto positivo na sociedade.
-        </p>
-
-        <h1>Nosso projeto</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut incidunt
-          id explicabo consequuntur alias commodi quam hic assumenda nam
-          necessitatibus, officiis amet consectetur molestias illo iure eos,
-          repellat velit tenetur!
-        </p>
+        <div class="textProjeto">
+          <div class="titulo-bloco">
+            <img src="/images_icon/Group29.png" alt="projetos" />
+            <h1>Nosso projeto</h1>
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut
+            incidunt id explicabo consequuntur alias commodi quam hic assumenda
+            nam necessitatibus, officiis amet consectetur molestias illo iure
+            eos, repellat velit tenetur!
+          </p>
+        </div>
       </section>
+      <section></section>
+      <section></section>
     </main>
-    <!-- <hr /> -->
 
     <!----------------------------------------------------------------------------------------------------------------------------------------->
-
+    <!----------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Tag <FOOTER> diz a página "aqui é o **RODAPÉ** do site" | SEMÂNTICO -->
     <footer class="footer">
-      <!-- Tag <FOOTER> diz a página "aqui é o rodapé do site" | SEMÂNTICO -->
-
+      <!-- container interno para organizar o conteúdo -->
       <div class="footer-content">
-        <!-- container interno para organizar o conteúdo -->
-
         <img src="Logo.png" alt="Deep Vision" class="logo" />
 
-        <!-- <p class="footer-logo">Deep Vision</p>   nome da equipe  -->
-
-        <!-- <p class="footer-text">
-          Soluções em Inteligência Artificial e Visão Computacional
-        </p> pequena descrição -->
-
-        <!-- direitos autorais -->
-        <!-- &copy representa o "c comercial = ©" -->
+        <!-- direitos autorais| &copy representa o "c comercial = ©" -->
         <p class="footer-copy">
           &copy; 2026 DeepVision - Projeto Integrador D.S.M 1. |
           <strong>Todos os direitos reservados.</strong>
         </p>
 
+        <!-- links para redes sociais -->
         <div class="social">
-          <!-- links para redes sociais -->
           <!-- ! target="_blank" faz com que se abra uma nova guia quando o usuário clica no link ! -->
           <a
             href="https://github.com/kawanvinicius742-wq/Projeto_Integrador_TEA"
             target="_blank"
-            ><img src="images_icon/vb/mdi_github.png" alt="GitHub" target=""
+            ><img src="images_icon/vb/mdi_github.png" alt="GitHub"
           /></a>
           <a href="https://www.instagram.com/" target="_blank"
             ><img src="images_icon/vb/mdi_instagram.png" alt="Instagram"
@@ -123,5 +128,31 @@
         </div>
       </div>
     </footer>
+
+    <!-- MODAL DE CADASTRO -->
+    <div id="cadastro" class="modal">
+      <!-- FUNDO ESCURO -->
+      <a href="#topo" class="modal-overlay"></a>
+
+      <!-- CAIXA DO FORMULÁRIO -->
+      <div class="modal-content">
+        <!-- BOTÃO FECHAR -->
+
+        <a href="#topo" class="close">&times;</a>
+
+        <h2>Cadastro de Usuário</h2>
+
+        <form>
+          <input class="cad" type="text" placeholder="Nome Completo" required />
+          <input class="cad" type="email" placeholder="Email" required />
+          <input class="cad" type="password" placeholder="Senha" required />
+          <input class="cad" type="password" placeholder="Confirmar Senha" required />
+
+          <button type="submit" class="btn">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+
+    <!--NADA FICA ABAIXO DAS TAGS <BODY> E <HTML> ! Por lógica, nada também ficará abaixo da Tag <FOOTER> (RODAPÉ).------------------------------------------------------------------------------------------------------------------------------->
   </body>
 </html>
