@@ -19,7 +19,7 @@ Identifica um elemento específico
   align-items: center; /* alinha vertical */
   padding: 20px 60px;
   background: #140042;
-  border-bottom:2px solid #9c3cfb;
+  border-bottom: 2px solid #9c3cfb;
 }
 
 /* LOGO */
@@ -54,15 +54,29 @@ Identifica um elemento específico
   background-color: #16063b;
   font-family: kulim park;
 }*/
-
-section {
+#format {
+  color: rgb(85, 5, 214);
+}
+.downHeader {
   color: azure;
   /*background-color: #2c0ba3; */
   background-image: url(Group27.png);
   background-position: center;
-  background-size:cover;
-  background-repeat:no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 135px;
+}
+
+.main {
+  color: azure;
+  background-color: #09011d;
+  padding: 125px;
+
+  /* display: flex; põe os ELEMENTOS LADO A LADO */
+  display: flex;
+
+  /* gap: 20px; da espaçamento entre os elementos */
+  gap: 20px;
 }
 
 /* ! ACIMA APENAS HEADER / CABEÇALHO (FECHADO) ! */
