@@ -79,6 +79,26 @@ Identifica um elemento específico
   gap: 20px;
 }
 
+.btn {
+  size: 30px;
+  background-color: #140042;
+  color: azure;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  border-color: #8cc9e4;
+}
+
+.btn:hover{
+  background-color: #19042a;
+  color: #fff;
+  transform: scale(0.9);
+  box-shadow: 0 8px 16px rgba(71, 1, 114, 0.5);
+}
+
 /* ! ACIMA APENAS HEADER / CABEÇALHO (FECHADO) ! */
 
 /* ! FOOTER ! RODAPÉ ! */
