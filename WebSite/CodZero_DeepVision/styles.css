@@ -19,6 +19,7 @@ Identifica um elemento específico
   align-items: center; /* alinha vertical */
   padding: 20px 60px;
   background: #140042;
+  border-bottom:2px solid #9c3cfb;
 }
 
 /* LOGO */
@@ -48,9 +49,25 @@ Identifica um elemento específico
   color: #9c3cfb;
 }
 
+/* MAIN SECTION "HEADER" */
+/*body{
+  background-color: #16063b;
+  font-family: kulim park;
+}*/
+
+section {
+  color: azure;
+  /*background-color: #2c0ba3; */
+  background-image: url(Group27.png);
+  background-position: center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  padding: 135px;
+}
+
 /* ! ACIMA APENAS HEADER / CABEÇALHO (FECHADO) ! */
 
-/* FOOTER */
+/* ! FOOTER ! RODAPÉ ! */
 .footer {
   background: #0b0b1a; /* fundo escuro */
   padding: 40px 20px; /* espaço interno */
@@ -58,7 +75,7 @@ Identifica um elemento específico
   border-top: 1px solid rgba(255, 255, 255, 0.1); /* linha superior */
 }
 
-/* CONTEÚDO INTERNO */
+/* CONTEÚDO INTERNO FOOTER/RODAPÉ */
 .footer-content {
   max-width: 800px; /* limita largura */
   margin: 0 auto; /* centraliza */
@@ -69,17 +86,17 @@ Identifica um elemento específico
 }
 
 /* LOGO TEXTO */
-.footer-logo {
+/*.footer-logo {
   color: #b870ff; /* cor da identidade */
-  font-size: 20px;
+/*  font-size: 20px;
   margin-bottom: 10px;
-}
+} */
 
 /* TEXTO */
-.footer-text {
+/* .footer-text {
   color: #ccc; /* cor mais suave */
-  margin-bottom: 15px;
-}
+/* margin-bottom: 15px;
+} */
 
 /* COPYRIGHT */
 .footer-copy {
@@ -88,16 +105,16 @@ Identifica um elemento específico
 }
 
 .social {
-    display: flex; /* deixa os ícones lado a lado */
-    gap: 15px; /* espaço entre eles */
+  display: flex; /* deixa os ícones lado a lado */
+  gap: 15px; /* espaço entre eles */
 }
 
 .social img {
-    height: 24px; /* tamanho dos ícones */
-    cursor: pointer; /* cursor de clique */
-    transition: 0.3s;
+  height: 24px; /* tamanho dos ícones */
+  cursor: pointer; /* cursor de clique */
+  transition: 0.3s;
 }
 
 .social img:hover {
-    transform: scale(1.1); /* leve aumento ao passar o mouse */
+  transform: scale(1.1); /* leve aumento ao passar o mouse */
 }
