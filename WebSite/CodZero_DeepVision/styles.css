@@ -1,15 +1,17 @@
 /*
-Uso do "CLASS"
+
+- Uso do ".CLASS"
 Pode ser usada várias vezes
 Serve para reutilizar estilo
-Mais usada no dia a dia
+Mais usada no dia a dia.
+
+- Uso do "#ID"
+Deve ser único na página
+Identifica um elemento específico.
+
 */
 
-/*
-Uso do "ID"
-Deve ser único na página
-Identifica um elemento específico
-*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* ! HEADER ! CABEÇALHO !*/
 /* NAVBAR */
@@ -18,25 +20,32 @@ Identifica um elemento específico
   justify-content: space-around; /* logo esquerda, menu direita */
   align-items: center; /* alinha vertical */
   padding: 20px 60px;
-  background: #140042;
-  border-bottom: 2px solid #9c3cfb;
+  border-bottom: 0.5px solid #9c3cfb;
+
+  background: linear-gradient(
+    90deg,
+    /* ângulo horizontal */ #140042 0%,
+    /* início */ #140128 50%,
+    /* meio (roxo destaque) */ #021124 100% /* fim (azul) */
+  );
 }
 
-/* LOGO */
+/* LOGO / Imagem DeepVision */
 .logo {
   color: #b870ff;
   font-size: 24px;
   height: 40px; /* controla o tamanho da logo */
 }
 
-/* MENU */
+/* MENU / Inicio - Sobre - Projetos - Equipe - Contato*/
 .menu {
   display: flex; /* deixa links lado a lado */
-  gap: 30px; /* espaço entre eles */
-  list-style: none; /* remove bolinhas da frente do "li"*/
+  gap: 30px; /* espaço entre eles (links) */
+  list-style: none; /* remove bolinhas de tópico da frente do "li"/links */
 }
 
 /* LINKS */
+/* .menu é a classe da tag"ul" que está dentro das tags "header" e "nav" */
 .menu a {
   text-decoration: none;
   color: white;
@@ -44,23 +53,21 @@ Identifica um elemento específico
   transition: 0.3s;
 }
 
-/* HOVER */
+/* HOVER - A função está deixando os links em cor roxa ao passar com mouse por cima*/
+
 .menu a:hover {
   color: #9c3cfb;
 }
 
 /* MAIN SECTION "HEADER" */
-/*body{
-  background-color: #16063b;
-  font-family: kulim park;
-}*/
+
 #format {
   color: rgb(85, 5, 214);
 }
 .downHeader {
   color: azure;
   /*background-color: #2c0ba3; */
-  background-image: url(Group27.png);
+  background-image: url(backgroundHeader.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -80,26 +87,60 @@ Identifica um elemento específico
 }
 
 .btn {
+  width: 200px; /* largura fixa (padroniza todos) */
+  height: 50px; /* altura fixa */
+
+  display: inline-flex; /* permite centralizar conteúdo */
+  justify-content: center; /* centraliza horizontal */
+  align-items: center; /* centraliza vertical */
+
   size: 30px;
-  background-color: #140042;
+  background-color: transparent;
   color: azure;
   padding: 20px;
   border-radius: 5px;
-  margin: 8px;
+  margin-right: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   outline: none;
   border-color: #8cc9e4;
 }
 
-.btn:hover{
-  background-color: #19042a;
+.btn:hover {
+  /*background-color: #000000;*/
+
+  /* "color" indica a cor do texto dentro do botão. */
   color: #fff;
+  /* "transform" aumenta ou diminui o tamanho do botão ao posicionar seta em cima. scale(1) é o padrão e não altera nada! */
   transform: scale(0.9);
-  box-shadow: 0 8px 16px rgba(71, 1, 114, 0.5);
+  /* "box-shadow" acrescenta uma sombra estilizada ao botão. */
+  box-shadow: 0 8px 16px rgba(8, 0, 13, 0.5);
+}
+
+.login-btn {
+  width: 100px; 
+  height: 40px;
+
+  border: 1px solid #9c3cfb;
+  color: #9c3cfb;
+  background: transparent;
+}
+
+/* HOVER */
+.login-btn:hover {
+  background: #9c3cfb;
+  color: white;
+}
+
+/* AGRUPA LOGIN + CADASTRO */
+.login-cadastro-grupo {
+  display: flex; /* coloca lado a lado */
+  gap: 10px; /* espaço entre os botões */
 }
 
 /* ! ACIMA APENAS HEADER / CABEÇALHO (FECHADO) ! */
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* ! FOOTER ! RODAPÉ ! */
 .footer {
@@ -118,19 +159,6 @@ Identifica um elemento específico
   align-items: center; /* alinha verticalmente */
   padding: 40px;
 }
-
-/* LOGO TEXTO */
-/*.footer-logo {
-  color: #b870ff; /* cor da identidade */
-/*  font-size: 20px;
-  margin-bottom: 10px;
-} */
-
-/* TEXTO */
-/* .footer-text {
-  color: #ccc; /* cor mais suave */
-/* margin-bottom: 15px;
-} */
 
 /* COPYRIGHT */
 .footer-copy {
@@ -152,3 +180,4 @@ Identifica um elemento específico
 .social img:hover {
   transform: scale(1.1); /* leve aumento ao passar o mouse */
 }
+/*FIM--------------------------------------------------------------------------------------------------------------------------------------------*/
