@@ -1,13 +1,35 @@
 <!-- Comentários estão acima da tag referenciada. - Kawan-->
+<!-- Este documento usa HTML5 -->
 <!doctype html>
+<!-- Idioma da página = português do Brasil -->
 <html lang="pt-br">
   <head>
+    <!-- permite acentos (á, é, ç) -->
     <meta charset="UTF-8" />
+    <!-- 
+    Responsividade é a capacidade de um site se adaptar automaticamente a diferentes tamanhos de tela.
+
+    viewport = área visível da página no dispositivo 
+    width=device-width = faz a largura da página = largura real do dispositivo
+    initial-scale=1.0 = define o zoom inicial = 100%
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Nome da aba do navegador -->
     <title>DeepVision - Technologies</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- SEO | Mecanismos de busca -->
+    <meta
+      name="description"
+      content="Projeto de visão computacional desenvolvido na Fatec"
+    />
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/header.css" />
+    <link rel="stylesheet" href="/CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/footer.css" />
   </head>
 
+  <!----------------------------------------------------------------------------------------------------------------------------------->
+  <!----------------------------------------------------------------------------------------------------------------------------------->
   <!----------------------------------------------------------------------------------------------------------------------------------->
 
   <!-- Tag <BODY> se refere ao corpo principal do site, sua estrutura visível como um todo. -->
@@ -16,8 +38,8 @@
     <!-- Tag <HEADER> diz para página que ali dentro contém um CABEÇALHO | SEMÂNTICA-->
     <header>
       <!-- Tag <NAV> diz para o navegador "Aqui tem NAVegação / LINKS" | SEMÂNTICA-->
-      <nav class="nav">
-        <!-- LOGO COMO IMAGEM -->
+      <nav class="navMenu">
+        <!-- Imagem da logo -->
         <img src="/Logo.png" alt="Deep Vision" class="logo" />
 
         <ul class="menu">
@@ -29,13 +51,10 @@
         </ul>
 
         <!-- Tag <DIV> agrupa elementos, serve como "container" | NÃO SEMÂNTICA -->
-
         <div class="login-cadastro-grupo">
-          <!-- BOTÃO DE LOGIN -->
-          <button class="btnLogin">Login</button>
           <!-- BOTÃO DE CADASTRO -->
-          <a href="#cadastro" class="btnCadastro">Cadastrar</a>
-          <!-- <button href="#cadastro"class="btnCadastro">Cadastro</button> -->
+          <a href="#cadastro" class="btnCadastro">Fale Conosco</a
+          ><!-- <button class="btnCadastro">Cadastro</button> -->
         </div>
       </nav>
 
@@ -93,21 +112,66 @@
           </p>
         </div>
       </section>
-      <section></section>
-      <section></section>
+      <section class="main2section">
+        <h1>Tecnologias Utilizadas</h1>
+
+        <div class="tech-container">
+          <!-- ITEM DE TECNOLOGIA -->
+          <div class="tech-item">
+            <img src="images_icon/html.png" alt="HTML" />
+            <p>HTML</p>
+          </div>
+
+          <div class="tech-item">
+            <img src="images_icon/css.png" alt="CSS" />
+            <p>CSS</p>
+          </div>
+
+          <div class="tech-item">
+            <img src="images_icon/js.png" alt="JavaScript" />
+            <p>JavaScript</p>
+          </div>
+        </div>
+      </section>
+      <section class="main3section">
+        <h1>Nossa Equipe</h1>
+
+        <div class="team-container">
+          <!-- MEMBRO -->
+          <div class="member">
+            <img src="membros/Kawan.jpeg" alt="Membro 1" />
+            <h3>Nome do Membro</h3>
+            <p>Função (ex: Front-end)</p>
+          </div>
+
+          <div class="member">
+            <img src="images/team2.png" alt="Membro 2" />
+            <h3>Nome do Membro</h3>
+            <p>Função (ex: Back-end)</p>
+          </div>
+
+          <div class="member">
+            <img src="images/team3.png" alt="Membro 3" />
+            <h3>Nome do Membro</h3>
+            <p>Função (ex: UI/UX)</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!----------------------------------------------------------------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------------------------------->
+
     <!-- Tag <FOOTER> diz a página "aqui é o **RODAPÉ** do site" | SEMÂNTICO -->
     <footer class="footer">
       <!-- container interno para organizar o conteúdo -->
-      <div class="footer-content">
-        <img src="Logo.png" alt="Deep Vision" class="logo" />
+      <div class="footerConteudo">
+        <img src="Logo.png" alt="Deep Vision" class="logoFooter" />
 
         <!-- direitos autorais| &copy representa o "c comercial = ©" -->
         <p class="footer-copy">
-          &copy; 2026 DeepVision - Projeto Integrador D.S.M 1. |
+          &copy; 2026 DeepVision - Projeto Integrador D.S.M 1. 
           <strong>Todos os direitos reservados.</strong>
         </p>
 
@@ -119,7 +183,7 @@
             target="_blank"
             ><img src="images_icon/vb/mdi_github.png" alt="GitHub"
           /></a>
-          <a href="https://www.instagram.com/" target="_blank"
+          <a href="https://www.instagram.com/fatecregistro/" target="_blank"
             ><img src="images_icon/vb/mdi_instagram.png" alt="Instagram"
           /></a>
           <a href="https://br.linkedin.com/" target="_blank"
@@ -129,7 +193,11 @@
       </div>
     </footer>
 
-    <!-- MODAL DE CADASTRO -->
+    <!----------------------------------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- MODAL DE CADASTRO / FORMULÁRIO -->
     <div id="cadastro" class="modal">
       <!-- FUNDO ESCURO -->
       <a href="#topo" class="modal-overlay"></a>
@@ -146,13 +214,17 @@
           <input class="cad" type="text" placeholder="Nome Completo" required />
           <input class="cad" type="email" placeholder="Email" required />
           <input class="cad" type="password" placeholder="Senha" required />
-          <input class="cad" type="password" placeholder="Confirmar Senha" required />
-
+          <input
+            class="cad"
+            type="password"
+            placeholder="Confirmar Senha"
+            required
+          />
           <button type="submit" class="btn">Cadastrar</button>
         </form>
       </div>
     </div>
 
-    <!--NADA FICA ABAIXO DAS TAGS <BODY> E <HTML> ! Por lógica, nada também ficará abaixo da Tag <FOOTER> (RODAPÉ).------------------------------------------------------------------------------------------------------------------------------->
+    <!--NADA FICA ABAIXO DAS TAGS <BODY> E <HTML> ! Por lógica, nada também ficará abaixo da Tag <FOOTER> (RODAPÉ).----------------------------------------------------------------------------------------------------------------->
   </body>
 </html>
