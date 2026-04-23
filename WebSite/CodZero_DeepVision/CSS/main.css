@@ -23,7 +23,7 @@ p {
   display: flex;
 
   /* gap: 20px; da espaçamento entre os elementos */
-  gap: 20px;
+  gap: 350px;
 
   background: linear-gradient(
     90deg,
@@ -69,7 +69,7 @@ p {
 }
 
 .textProjeto {
-  border-left: 1px solid rgba(255, 255, 255, 0.2); /* linha vertical */
+  border-left: 1px solid rgba(255, 255, 255, 0.3); /* linha vertical */
   padding-left: 30px; /* afasta o texto da linha */
 }
 
@@ -130,7 +130,12 @@ p {
 /* ! SEÇÃO EQUIPE ! */
 
 .main3section {
-  background-color: #0b0b1a;
+  background: linear-gradient(
+    90deg,
+    /* ângulo horizontal */ #14033a 0%,
+    /* início */ #140128 50%,
+    /* meio (roxo destaque) */ #01142e 100% /* fim (azul) */
+  );
   color: white;
   padding: 100px 60px;
   text-align: center;
