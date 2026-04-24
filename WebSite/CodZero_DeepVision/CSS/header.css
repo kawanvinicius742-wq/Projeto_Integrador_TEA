@@ -154,6 +154,7 @@
 /* CAIXA DO MODAL */
 .cad {
   margin: 10px;
+  width: 85%;
 }
 
 .modal-content {
@@ -195,6 +196,7 @@
 
   outline: none;
   transition: 0.2s;
+
 }
 
 /* FOCO */
@@ -227,6 +229,14 @@
 /* HOVER FECHAR */
 .close:hover {
   color: #9c3cfb;
+}
+
+.obs{
+background: #2d013e;
+resize: none;
+margin-right: 15px;
+/* width: %; */
+
 }
 
 /* ! ACIMA APENAS HEADER / CABEÇALHO (FECHADO) ! */
