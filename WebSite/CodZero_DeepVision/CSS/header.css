@@ -1,25 +1,28 @@
+* {
+  box-sizing: border-box; /* evita quebra de layout */
+}
 /* ! HEADER ! CABEÇALHO !*/
+header {
+  margin: auto;
+}
 /* NAVBAR */
 .navMenu {
-  display: flex; /* coloca tudo em linha */
-  justify-content: space-between; /* logo esquerda, menu direita */
+  display: flex; /* alinhamento */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* alinha horizontal */
   align-items: center; /* alinha vertical */
   padding: 20px 60px;
-  border-bottom: 0.5px solid #9c3cfb;
-
-  background: linear-gradient(
-    90deg,
-    /* ângulo horizontal */ #140042 0%,
-    /* início */ #140128 50%,
-    /* meio (roxo destaque) */ #021124 100% /* fim (azul) */
-  );
+  margin: 0 auto;
+  max-width: auto;
+  background: linear-gradient(90deg, #140042 0%,#140128 50%,#05254e 100% );
 }
 
 /* LOGO / Imagem DeepVision */
 .logo {
   color: #b870ff;
-  font-size: 24px;
-  height: 40px; /* controla o tamanho da logo */
+  width: 160px; /* LARGURA */
+  height: auto; /* ALTURA */
 }
 
 /* .menu é a classe da tag "ul" que está dentro das tags "header" e "nav" */
@@ -28,91 +31,46 @@
   display: flex; /* deixa links lado a lado */
   gap: 30px; /* espaço entre eles (links) */
   list-style: none; /* remove bolinhas de tópico da frente do "li"/links */
+  padding: 0;
 }
 
 /* LINKS */
 .menu a {
-  text-decoration:none;
+  text-decoration: none;
   color: white;
   font-size: 18px;
   transition: 0.3s;
 }
 
 /* Dentro do :hover as ações só acontecem ao passar o mouse por cima */
+/* :hover é o estado dp elemento */
 .menu a:hover {
   color: #9c3cfb;
-  text-decoration:underline;
-  text-underline-offset: 16px;
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
-
-/* MAIN SECTION "HEADER" */
-
-#format {
-  color: rgb(85, 5, 214);
-}
-
-.downHeader {
-  color: azure;
-  background-image: url(/CSS/backgroundHeader.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 135px;
-  font-size: 28px;
-}
-
-.btn {
-  width: 200px; /* largura fixa (padroniza todos) */
-  height: 50px; /* altura fixa */
-
-  display: inline-flex; /* permite centralizar conteúdo */
-  justify-content: center; /* centraliza horizontal */
-  align-items: center; /* centraliza vertical */
-
-  size: 30px;
-  background-color: transparent;
-  color: azure;
-  padding: 20px;
-  border-radius: 5px;
-  margin-right: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-  border-color: #8cc9e4;
-}
-
-.btn:hover {
-  /* "color" indica a cor do texto dentro do botão. */
-  color: #fff;
-  /* "transform" aumenta ou diminui o tamanho do botão ao posicionar seta em cima. scale(1) é o padrão e não altera nada! */
-  transform: scale(0.9);
-  /* "box-shadow" acrescenta uma sombra estilizada ao botão. */
-  box-shadow: 0 8px 16px rgba(8, 0, 13, 0.5);
-}
-
-
-/* HOVER */
 
 .btnCadastro {
-  width: 100px;
-  height: 40px;
-
-  /* Está impedindo o botao cadastro de aumentar */
-  box-sizing: border-box;
+  /* LARGURA */
+  width: 200px;
+  /* ALTURA */
+  height: 50px;
 
   text-decoration: none; /* REMOVE sublinhado do link */
   text-align: center;
-  display: inline-flex; /* permite centralizar conteúdo */
+  display: flex;
 
-  /* align-itens colocou o texto exatamente no centro do botão */
+  /* align-itens e justify-content colocou o texto exatamente no centro do botão */
   align-items: center;
-  justify-content: center; /* centraliza horizontal */
+  justify-content: center;
 
   border: 1px solid #9c3cfb;
-  border-radius: 2px;
+  border-radius: 30px;
   color: #9c3cfb;
-  background:linear-gradient(90deg,#140128, #140042, #32065d);
+  background: transparent;
+  /* background: linear-gradient(90deg, #140128, #140042, #32065d); */
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* HOVER */
@@ -124,7 +82,6 @@
 /* AGRUPA LOGIN + CADASTRO */
 .login-cadastro-grupo {
   display: flex; /* coloca lado a lado */
-  gap: 10px; /* espaço entre os botões */
 }
 
 /*  */
@@ -196,7 +153,6 @@
 
   outline: none;
   transition: 0.2s;
-
 }
 
 /* FOCO */
@@ -231,12 +187,9 @@
   color: #9c3cfb;
 }
 
-.obs{
-background: #2d013e;
-resize: none;
-margin-right: 15px;
-/* width: %; */
-
+.obs {
+  background: #2d013e;
+  resize: none;
+  margin-right: 15px;
+  /* width: %; */
 }
-
-/* ! ACIMA APENAS HEADER / CABEÇALHO (FECHADO) ! */
