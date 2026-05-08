@@ -43,11 +43,3 @@
 .social img:hover {
   transform: scale(1.1); /* leve aumento ao passar o mouse */
 }
-
-@media (max-width: 768px) {
-
-  .footerConteudo {
-    flex-direction: column;
-  }
-
-}

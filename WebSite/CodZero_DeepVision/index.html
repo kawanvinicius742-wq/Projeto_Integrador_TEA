@@ -14,6 +14,8 @@
     initial-scale=1.0 = define o zoom inicial = 100%
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icone pequeno na aba do navegador -->
+     <link rel="shortcut icon" href="logos/icone/Polygon-1.ico" type="image/x-icon">
     <!-- Nome da aba do navegador -->
     <title>DeepVision - Technologies</title>
     <!-- SEO | Mecanismos de busca -->
@@ -45,8 +47,8 @@
         <ul class="menu">
           <li><a href="#">Início</a></li>
           <li><a href="#">Sobre</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Equipe</a></li>
+          <li><a href="#project">Projetos</a></li>
+          <li><a href="#equipe">Equipe</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
 
@@ -59,16 +61,7 @@
       </nav>
 
       <!-- Tag <SECTION> divide o conteúdo em *BLOCOS* "temáticos", parte independente que se relaciona com o contexto da página. | SEMÂNTICA-->
-      
-    </header>
-
-    <!----------------------------------------------------------------------------------------------------------------------------------->
-    <!----------------------------------------------------------------------------------------------------------------------------------->
-    <!----------------------------------------------------------------------------------------------------------------------------------->
-
-    <main>
-      <!--Section "downHeader" = Sessão HERO -->
-        <section class="downHeader">
+      <section class="downHeader">
         <h1>
           <strong id="format">Deep</strong>Vision <br />
           Inteligência Artificial
@@ -83,11 +76,21 @@
         </p>
 
         <br /><br />
-        <button class="btn" type="checkbox" placeholder="Conheça o projeto">
+        <a href="#project">
+          <button class="btn" type="checkbox" placeholder="Conheça o projeto">
           Conheça o projeto
         </button>
-        <button class="btn" type="checkbox" placeholder="">Nossa equipe</button>
+      </a>
+        
+        <a href="#equipe">
+        </a><button class="btn" type="checkbox" placeholder="">Nossa equipe
+        </button></a>
       </section>
+    </header>
+
+    <!------------------------------------------------------------------------------------------------------------------------------------------------>
+
+    <main>
       <!-- Abaixo encontra-se uma seção que diz sobre a EQUIPE e alguns dos nossos PROJETOS. -->
       <section class="main1section">
         <div class="textSobre">
@@ -103,7 +106,7 @@
           </p>
         </div>
 
-        <div class="textProjeto">
+        <div class="textProjeto" id="#project">
           <div class="titulo-bloco">
             <img src="/images_icon/Group29.png" alt="projetos" />
             <h1>Nosso projeto</h1>
@@ -122,17 +125,17 @@
         <div class="tech-container">
           <!-- ITEM DE TECNOLOGIA -->
           <div class="tech-item">
-            <img src="images_icon/html.png" alt="HTML" />
+            <img src="images_icon/usados/HTML5_logo_and_wordmark.svg.png" alt="HTML" />
             <p>HTML</p>
           </div>
 
           <div class="tech-item">
-            <img src="images_icon/css.png" alt="CSS" />
+            <img src="images_icon/usados/CSS3_logo.svg.png" alt="CSS"  class="css"/>
             <p>CSS</p>
           </div>
 
           <div class="tech-item">
-            <img src="images_icon/js.png" alt="JavaScript" />
+            <img src="images_icon/usados/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript" class="javalogo" />
             <p>JavaScript</p>
           </div>
         </div>
@@ -142,7 +145,7 @@
 
         <div class="team-container">
           <!-- MEMBRO -->
-          <div class="member">
+          <div class="member" id="#equipe">
             <img src="membros/Kawan.jpeg" alt="Membro 1" />
             <h3>Kawan</h3>
             <p>Função (ex: Front-end)</p>
@@ -151,19 +154,19 @@
           <div class="member">
             <img src="images/team2.png" alt="Membro 2" />
             <h3>Millie</h3>
-            <p>Função (ex: Front-end)</p>
+            <p>Função (ex: Back-end)</p>
           </div>
 
           <div class="member">
             <img src="images/team3.png" alt="Membro 3" />
             <h3>Osvaldo</h3>
-            <p>Função (ex: Front-end)</p>
+            <p>Função (ex: UI/UX)</p>
           </div>
 
           <div class="member">
             <img src="images/team4.png" alt="Membro 4" />
             <h3>Hector</h3>
-            <p>Função (ex: Front-end)</p>
+            <p>Função (ex: Banco de Dados / SQL)</p>
           </div>
 
           <div class="member">
@@ -229,15 +232,13 @@
         <form>
           <input class="cad" type="text" placeholder="Nome Completo" required />
           <input class="cad" type="email" placeholder="Email" required />
-
+          
           <label>
-            <textarea
-              class="obs"
+            <textarea class="obs"
               rows="4"
               cols="40"
               name="observacoes"
-              id="observacoes"
-              placeholder="Observacao"
+              placeholder=" Observações"
             ></textarea>
           </label>
 

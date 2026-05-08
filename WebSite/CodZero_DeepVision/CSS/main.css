@@ -1,4 +1,6 @@
-body {
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+body{
   margin: 0px;
 }
 
@@ -10,65 +12,18 @@ p {
 
 /* ! MAIN ! CONTEÚDO PRINCIPAL */
 
-/* HERO */
-
-#format {
-  color: rgb(85, 5, 214);
-}
-
-.downHeader {
-  color: azure;
-  background-image: url(/CSS/backgroundHeader.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 135px 90px;
-  font-size: 28px;
-  margin: 0 auto;
-}
-
-.btn {
-  width: 200px; /* largura fixa (padroniza todos) */
-  height: 50px; /* altura fixa */
-
-  display: inline-flex; /* permite centralizar conteúdo */
-  justify-content: center; /* centraliza horizontal */
-  align-items: center; /* centraliza vertical */
-
-  size: 30px;
-  background-color: transparent;
-  color: azure;
-  padding: 20px;
-  border-radius: 5px;
-  margin-right: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-  border-color: #8cc9e4;
-}
-
-.btn:hover {
-  /* "color" indica a cor do texto dentro do botão. */
-  color: #fff;
-  /* "transform" aumenta ou diminui o tamanho do botão ao posicionar seta em cima. scale(1) é o padrão e não altera nada! */
-  transform: scale(0.9);
-  /* "box-shadow" acrescenta uma sombra estilizada ao botão. */
-  box-shadow: 0 8px 16px rgba(8, 0, 13, 0.5);
-}
-
 /* 1º Seção / Section */
 .main1section {
-  flex-wrap: wrap;
   color: azure;
-  padding: 60px 20px;
+  padding: 90px;
 
-  max-width: auto;
-  margin: 0 auto;
-
-  align-items: auto;
-  justify-content: space-around;
+  align-items: center;
 
   /* display: flex; põe os ELEMENTOS LADO A LADO */
   display: flex;
+
+  /* gap: 20px; da espaçamento entre os elementos */
+  gap: 350px;
 
   background: linear-gradient(
     90deg,
@@ -114,7 +69,6 @@ p {
 }
 
 .textProjeto {
-  max-width: 500px; /* limita largura do texto */
   border-left: 1px solid rgba(255, 255, 255, 0.3); /* linha vertical */
   padding-left: 30px; /* afasta o texto da linha */
 }
@@ -146,7 +100,7 @@ p {
 .main2section {
   background-color: #09011d;
   color: white;
-  padding: 80px 20px;
+  padding: 100px 60px;
   text-align: center;
 }
 
@@ -216,35 +170,17 @@ p {
 /* HOVER */
 .member:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navMenu {
-    gap: 15px;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 250px;
-  }
+.css{
+  max-height: 45%;
+  max-width: 85%;
+  margin-top: 18%;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .main1section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .textProjeto {
-    border-left: none;
-    padding-left: 0;
-  }
+.javalogo{
+  max-height: 60%;
+  max-width: 85%;
+  margin-top: 5%;
 }
