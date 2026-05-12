@@ -184,3 +184,11 @@ p {
   max-width: 85%;
   margin-top: 5%;
 }
+
+@media (max-width: 768px) {
+    * {
+        margin: auto;
+        max-width: auto;
+        max-height: auto;
+    }
+}
