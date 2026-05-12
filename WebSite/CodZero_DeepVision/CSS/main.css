@@ -185,10 +185,27 @@ p {
   margin-top: 5%;
 }
 
-@media (max-width: 768px) {
+@media(max-width: 768px) {
     * {
-        margin: auto;
-        max-width: auto;
         max-height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+
+    .menu{
+      display: none;
+      
+    }
+
+    .navMenu{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .downHeader{
+      font-size: 30px;
+    }
+   
 }
