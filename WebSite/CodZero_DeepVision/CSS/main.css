@@ -1,6 +1,6 @@
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 
-body{
+body {
   margin: 0px;
 }
 
@@ -170,42 +170,112 @@ p {
 /* HOVER */
 .member:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.css{
+.css {
   max-height: 45%;
   max-width: 85%;
   margin-top: 18%;
 }
 
-.javalogo{
+.javalogo {
   max-height: 60%;
   max-width: 85%;
   margin-top: 5%;
 }
 
-@media(max-width: 768px) {
-    * {
-        max-height: auto;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    box-sizing: border-box;
 
-    .menu{
-      display: none;
-      
-    }
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .menu {
+    display: none;
+    max-width: 100%;
+  }
+  .navMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .downHeader {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    background-position: right;
+  }
+  .downHeader h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 200%;
+  }
+  .downHeader p {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 200%;
+  }
+  title {
+    display: none;
+  }
+  #format {
+    color: #9838F7;
+  }
+  header {
+    max-width: 100%;
+  }
+/* * {
+    outline: 1px solid red;
+    } */
+  .btn {
+    width: 100%;
+  }
+  .butao {
+    display: flex;
+    gap: 0.5rem;
+    
+  }
+  .textProjeto {
+  border-left: 0; /* linha vertical */
+  padding-left: 0; /* afasta o texto da linha */
+}
+  .textSobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main1section{
+    gap: 35px;
+  }
+  .tech-container{
+    display: flex;
+    flex-direction: row;
+  }
+ .team-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    .navMenu{
-      display: flex;
-      flex-direction: row;
-    }
-
-    .downHeader{
-      font-size: 30px;
-    }
-   
+.member {
+    width: 100%;
+    max-width: 100%;
+}
+.social{
+  display: flex;
+  flex-direction: row;
+}
 }

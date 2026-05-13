@@ -70,15 +70,16 @@
   align-items: center; /* centraliza vertical */
 
   size: 30px;
-  background-color: transparent;
-  color: azure;
+  background-color: #32065d;
+  color: white;
   padding: 20px;
   border-radius: 5px;
   margin-right: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   outline: none;
-  border-color: #8cc9e4;
+  border-color: #9c3cfb;
+  border: none;
 }
 
 .btn:hover {
