@@ -15,7 +15,7 @@
     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Icone pequeno na aba do navegador -->
-     <link rel="shortcut icon" href="logos/icone/Polygon-1.ico" type="image/x-icon">
+     <link rel="shortcut icon" href="imgs/logos/icon/vIcon.ico" type="image/x-icon">
     <!-- Nome da aba do navegador -->
     <title>DeepVision - Technologies</title>
     <!-- SEO | Mecanismos de busca -->
@@ -24,10 +24,11 @@
       content="Projeto de visão computacional desenvolvido na Fatec"
     />
     <!-- CSS externo -->
-    <link rel="stylesheet" href="/CSS/styles.css" />
-    <link rel="stylesheet" href="/CSS/header.css" />
-    <link rel="stylesheet" href="/CSS/main.css" />
-    <link rel="stylesheet" href="/CSS/footer.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Fonte externa (Kulim Park) -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
   </head>
 
   <!----------------------------------------------------------------------------------------------------------------------------------->
@@ -42,7 +43,7 @@
       <!-- Tag <NAV> diz para o navegador "Aqui tem NAVegação / LINKS" | SEMÂNTICA-->
       <nav class="navMenu">
         <!-- Imagem da logo -->
-        <img src="/Logo.png" alt="Deep Vision" class="logo" />
+        <img src="imgs/logos/Logo.png" alt="Deep Vision" class="logo" />
 
         <ul class="menu">
           <li><a href="#">Início</a></li>
@@ -66,28 +67,20 @@
           <strong id="format">DeepVision <br />
           </strong>Inteligência Artificial
           <br />
-          que enxerga além! </strong>
+          que enxerga além!
         </h1>
 
         <p>
           Desenvolvemos soluções inteligentes com visão computacional
-          <br />
+          <br/>
           para tranformar dados em impacto real
         </p>
         <br /><br />
-        <a href="#project">
-          <div class="butao">
-          <button class="btn" type="checkbox" placeholder="Conheça o projeto">
-          Conheça o projeto
-        </button>
-      </a>
-        
-        <a href="#equipe">
-        </a><button class="btn" type="checkbox" placeholder="Nossa Equipe">
-          Nossa equipe
-        </button></a>
+        <div class="botao">
+          <button class="btn" type="button" onclick="location.href='#project'">Conheça o projeto</button>
+          <button class="btn" type="button" onclick="location.href='#equipe'">Nossa equipe</button>
+        </div>
       </section>
-    </div>
     </header>
 
     <!------------------------------------------------------------------------------------------------------------------------------------------------>
@@ -97,20 +90,20 @@
       <section class="main1section">
         <div class="textSobre">
           <div class="titulo-bloco">
-            <img src="/images_icon/Group 28.png" alt="nos" />
+            <img src="imgs/icons/iconTeam.png" alt="sobrenos" />
             <h1>Sobre nós</h1>
           </div>
           <p>
             Somos a Deep Vision, uma equipe dedicada ao desenvolvimento <br />
             de soluções inovadoras em Inteligência Artificial e Visão
-            Computacional, <br />Nosso objetivo é criar tecnologias que gerem
+            Computacional, <br/>Nosso objetivo é criar tecnologias que gerem
             impacto positivo na sociedade.
           </p>
         </div>
 
-        <div class="textProjeto" id="#project">
+        <div class="textProjeto" id="project">
           <div class="titulo-bloco">
-            <img src="/images_icon/Group29.png" alt="projetos" />
+            <img src="imgs/icons/iconProjects.png" alt="projetos" />
             <h1>Nosso projeto</h1>
           </div>
           <p>
@@ -127,17 +120,17 @@
         <div class="tech-container">
           <!-- ITEM DE TECNOLOGIA -->
           <div class="tech-item">
-            <img src="images_icon/usados/HTML5_logo_and_wordmark.svg.png" alt="HTML" />
+            <img src="imgs/icons/tecnologias/html5.png" alt="HTML" />
             <p>HTML</p>
           </div>
 
           <div class="tech-item">
-            <img src="images_icon/usados/CSS3_logo.svg.png" alt="CSS"  class="css"/>
+            <img src="imgs/icons/tecnologias/css3.png" alt="CSS"  class="css"/>
             <p>CSS</p>
           </div>
 
           <div class="tech-item">
-            <img src="images_icon/usados/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript" class="javalogo" />
+            <img src="imgs/icons/tecnologias/javascript.webp" alt="JavaScript" class="javalogo" />
             <p>JavaScript</p>
           </div>
         </div>
@@ -147,34 +140,29 @@
 
         <div class="team-container">
           <!-- MEMBRO -->
-          <div class="member" id="#equipe">
-            <img src="membros/Kawan.jpeg" alt="Membro 1" />
+          <div class="member" id="equipe">
+            <img src="imgs/membros/Kawan.jpeg" alt="Membro 1" />
             <h3>Kawan</h3>
-            <p>Função (ex: Front-end)</p>
           </div>
 
           <div class="member">
-            <img src="images/team2.png" alt="Membro 2" />
+            <img src="imgs/membros/Kawan.jpeg" alt="Membro 2" />
             <h3>Millie</h3>
-            <p>Função (ex: Back-end)</p>
           </div>
 
           <div class="member">
-            <img src="images/team3.png" alt="Membro 3" />
+            <img src="imgs/membros/Kawan.jpeg" alt="Membro 3" />
             <h3>Osvaldo</h3>
-            <p>Função (ex: UI/UX)</p>
           </div>
 
           <div class="member">
-            <img src="images/team4.png" alt="Membro 4" />
+            <img src="imgs/membros/Kawan.jpeg" alt="Membro 4" />
             <h3>Hector</h3>
-            <p>Função (ex: Banco de Dados / SQL)</p>
           </div>
 
           <div class="member">
-            <img src="images/team5.png" alt="Membro 5" />
+            <img src="imgs/membros/Kawan.jpeg" alt="Membro 5" />
             <h3>Julio</h3>
-            <p>Função (ex: Front-end)</p>
           </div>
         </div>
       </section>
@@ -188,7 +176,7 @@
     <footer class="footer">
       <!-- container interno para organizar o conteúdo -->
       <div class="footerConteudo">
-        <img src="Logo.png" alt="Deep Vision" class="logoFooter" />
+        <img src="imgs/logos/Logo.png" alt="Deep Vision" class="logoFooter" />
 
         <!-- direitos autorais| &copy representa o "c comercial = ©" -->
         <p class="footer-copy">
@@ -202,13 +190,13 @@
           <a
             href="https://github.com/kawanvinicius742-wq/Projeto_Integrador_TEA"
             target="_blank"
-            ><img src="images_icon/vb/mdi_github.png" alt="GitHub"
+            ><img src="imgs/icons/contato/mdi_github.png" alt="GitHub"
           /></a>
           <a href="https://www.instagram.com/fatecregistro/" target="_blank"
-            ><img src="images_icon/vb/mdi_instagram.png" alt="Instagram"
+            ><img src="imgs/icons/contato/mdi_instagram.png" alt="Instagram"
           /></a>
           <a href="https://br.linkedin.com/" target="_blank"
-            ><img src="images_icon/vb/mdi_linkedin.png" alt="LinkedIn"
+            ><img src="imgs/icons/contato/mdi_linkedin.png" alt="LinkedIn"
           /></a>
         </div>
       </div>
