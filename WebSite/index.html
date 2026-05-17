@@ -47,10 +47,10 @@
 
         <ul class="menu">
           <li><a href="#">Início</a></li>
-          <li><a href="#">Sobre</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
           <li><a href="#project">Projetos</a></li>
           <li><a href="#equipe">Equipe</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
 
         <!-- Tag <DIV> agrupa elementos, serve como "container" | NÃO SEMÂNTICA -->
@@ -63,22 +63,24 @@
 
       <!-- Tag <SECTION> divide o conteúdo em *BLOCOS* "temáticos", parte independente que se relaciona com o contexto da página. | SEMÂNTICA-->
       <section class="downHeader">
-        <h1>
-          <strong id="format">DeepVision <br />
-          </strong>Inteligência Artificial
-          <br />
-          que enxerga além!
-        </h1>
+        <div class="header-left">
+          <h1>
+            <strong id="format">DeepVision <br />
+            </strong>Inteligência Artificial
+            <br />
+            que enxerga além!
+          </h1>
 
-        <p>
-          Desenvolvemos soluções inteligentes com visão computacional
-          <br/>
-          para tranformar dados em impacto real
-        </p>
-        <br /><br />
-        <div class="botao">
-          <button class="btn" type="button" onclick="location.href='#project'">Conheça o projeto</button>
-          <button class="btn" type="button" onclick="location.href='#equipe'">Nossa equipe</button>
+          <p>
+            Desenvolvemos soluções inteligentes com visão computacional
+            <br/>
+            para transformar dados em impacto real.
+          </p>
+
+          <div class="botao">
+            <button class="btn" type="button" onclick="location.href='#project'">Conheça o projeto</button>
+            <button class="btn" type="button" onclick="location.href='#equipe'">Conheça a equipe</button>
+          </div>
         </div>
       </section>
     </header>
@@ -87,31 +89,40 @@
 
     <main>
       <!-- Abaixo encontra-se uma seção que diz sobre a EQUIPE e alguns dos nossos PROJETOS. -->
-      <section class="main1section">
-        <div class="textSobre">
+      <section class="main1section" id="sobre">
+        <div class="textBlock">
           <div class="titulo-bloco">
-            <img src="imgs/icons/iconTeam.png" alt="sobrenos" />
+            <img src="imgs/icons/iconTeam.png" alt="sobrenos" class="section-icon" />
             <h1>Sobre nós</h1>
           </div>
           <p>
-            Somos a Deep Vision, uma equipe dedicada ao desenvolvimento <br />
-            de soluções inovadoras em Inteligência Artificial e Visão
-            Computacional, <br/>Nosso objetivo é criar tecnologias que gerem
-            impacto positivo na sociedade.
+            A DeepVision é uma equipe de desenvolvimento de software focada em desenvolver soluções inovadoras utilizando a visão computacional.
+            Equipe formada durante o primeiro semestre na FATEC de Registro, no curso de Desenvolvimento de Software Multiplataforma.
           </p>
         </div>
 
-        <div class="textProjeto" id="project">
+        <div class="section-divider"></div>
+
+        <div class="textBlock textProjeto" id="project">
           <div class="titulo-bloco">
-            <img src="imgs/icons/iconProjects.png" alt="projetos" />
-            <h1>Nosso projeto</h1>
+            <img src="imgs/icons/iconProjects.png" alt="projetos" class="section-icon" />
+            <h1>Projetos</h1>
           </div>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut
-            incidunt id explicabo consequuntur alias commodi quam hic assumenda
-            nam necessitatibus, officiis amet consectetur molestias illo iure
-            eos, repellat velit tenetur!
+          <p class="project-small-description">
+            Descubra um dos nossos projetos em desenvolvimento com foco em visão computacional.
           </p>
+
+          <div class="project-card">
+            <img
+              src="imgs/logos/logofacetea.png"
+              alt="Logo do projeto"
+              class="project-logo"
+            />
+            <div class="project-info">
+              <h2>FaceTEA</h2>
+              <p>Sistema desenvolvido para a terapia de crianças com Transtorno de Espectro Autista. Utiliza visão computacional para reconhecimento de expressões faciais em tempo real, além de gerar relatórios detalhados para análise do terapeuta.</p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="main2section">
@@ -141,28 +152,28 @@
         <div class="team-container">
           <!-- MEMBRO -->
           <div class="member" id="equipe">
-            <img src="imgs/membros/Kawan.jpeg" alt="Membro 1" />
-            <h3>Kawan</h3>
+            <img src="imgs/membros/Kawan.jpeg" alt="Membro 1 - Kawan Peniche" />
+            <h3>Kawan Peniche</h3>
           </div>
 
           <div class="member">
-            <img src="imgs/membros/Kawan.jpeg" alt="Membro 2" />
-            <h3>Millie</h3>
+            <img src="imgs/membros/millie.jpeg" alt="Membro 2 - Millie Santos" />
+            <h3>Millie Santos</h3>
           </div>
 
           <div class="member">
-            <img src="imgs/membros/Kawan.jpeg" alt="Membro 3" />
-            <h3>Osvaldo</h3>
+            <img src="imgs/membros/osvaldo.jpeg" alt="Membro 3 - Osvaldo Carvalho" />
+            <h3>Osvaldo Carvalho</h3>
           </div>
 
           <div class="member">
-            <img src="imgs/membros/Kawan.jpeg" alt="Membro 4" />
-            <h3>Hector</h3>
+            <img src="imgs/membros/hector.jpeg" alt="Membro 4 - Hector Yagyu" />
+            <h3>Hector Yagyu</h3>
           </div>
 
           <div class="member">
-            <img src="imgs/membros/Kawan.jpeg" alt="Membro 5" />
-            <h3>Julio</h3>
+            <img src="imgs/membros/julio.jpeg" alt="Membro 5 - Julio Lima" />
+            <h3>Julio Lima</h3>
           </div>
         </div>
       </section>
@@ -181,11 +192,11 @@
         <!-- direitos autorais| &copy representa o "c comercial = ©" -->
         <p class="footer-copy">
           &copy; 2026 DeepVision - Projeto Integrador D.S.M 1.
-          <strong>Todos os direitos reservados.</strong>
         </p>
+        <p class="footer-copy"><strong>Todos os direitos reservados.</strong></p>
 
         <!-- links para redes sociais -->
-        <div class="social">
+        <div class="social" id="contato">
           <!-- ! target="_blank" faz com que se abra uma nova guia quando o usuário clica no link ! -->
           <a
             href="https://github.com/kawanvinicius742-wq/Projeto_Integrador_TEA"

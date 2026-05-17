@@ -31,7 +31,6 @@ body {
 }
 
 p {
-  display: flex;
   text-align: center;
   margin: 5px;
 }
@@ -95,68 +94,97 @@ p {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 135px;
+  padding: 100px 90px;
   font-size: 28px;
+  width: 100%;
+}
+
+.header-left {
+  max-width: 980px;
+  text-align: left;
+}
+
+.header-left h1,
+.header-left p {
+  text-align: left;
+}
+
+.header-left p {
+  margin-bottom: 28px;
+}
+
+.botao {
+  display: inline-flex;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .btn {
-  width: 200px; /* largura fixa (padroniza todos) */
-  height: 50px; /* altura fixa */
+  min-width: 170px;
+  height: 50px;
 
-  display: inline-flex; /* permite centralizar conteúdo */
-  justify-content: center; /* centraliza horizontal */
-  align-items: center; /* centraliza vertical */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-  background-color: #32065d;
+  background: linear-gradient(135deg, #32065d 0%, #1a0247 100%);
   color: white;
-  padding: 20px;
-  border-radius: 5px;
-  margin-right: 10px;
+  padding: 0 22px;
+  border-radius: 30px;
+  margin-right: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-  border-color: #9c3cfb;
-  border: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  border: 1px solid rgba(156, 60, 251, 0.35);
+}
+
+.btn {
+  min-width: 170px;
+  height: 50px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #32065d 0%, #1a0247 100%);
+  color: white;
+  padding: 0 22px;
+  border-radius: 30px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  border: 1px solid rgba(156, 60, 251, 0.35);
 }
 
 .btn:hover {
-  /* "color" indica a cor do texto dentro do botão. */
   color: #fff;
-  /* "transform" aumenta ou diminui o tamanho do botão ao posicionar seta em cima. scale(1) é o padrão e não altera nada! */
-  transform: scale(0.9);
-  /* "box-shadow" acrescenta uma sombra estilizada ao botão. */
-  box-shadow: 0 8px 16px rgba(8, 0, 13, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px rgba(13, 5, 39, 0.35);
 }
 
 
-/* HOVER */
-
 .btnCadastro {
-  width: 100px;
-  height: 40px;
-
-  /* Está impedindo o botao cadastro de aumentar */
+  min-width: 150px;
+  height: 44px;
   box-sizing: border-box;
-
-  text-decoration: none; /* REMOVE sublinhado do link */
+  text-decoration: none;
   text-align: center;
-  display: inline-flex; /* permite centralizar conteúdo */
-
-  /* align-itens colocou o texto exatamente no centro do botão */
+  display: inline-flex;
   align-items: center;
-  justify-content: center; /* centraliza horizontal */
-
-  border: 1px solid #9c3cfb;
-  border-radius: 2px;
+  justify-content: center;
+  padding: 0 18px;
+  border: 2px solid #9c3cfb;
+  border-radius: 28px;
   color: #9c3cfb;
-  background:linear-gradient(90deg,#140128, #140042, #32065d);
+  background: linear-gradient(90deg, #140128, #140042, #32065d);
   cursor: pointer;
 }
 
-/* HOVER */
 .btnCadastro:hover {
   background: #9c3cfb;
   color: white;
+  border-color: #9c3cfb;
 }
 
 /* AGRUPA LOGIN + CADASTRO */
@@ -292,84 +320,108 @@ outline: 0;
 /* 1º Seção / Section */
 .main1section {
   color: azure;
-  padding: 90px;
-
-  align-items: center;
-
-  /* display: flex; põe os ELEMENTOS LADO A LADO */
+  padding: 90px 40px;
   display: flex;
-
-  /* gap: 20px; da espaçamento entre os elementos */
-  gap: 350px;
-
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
   background: linear-gradient(
     90deg,
-    /* ângulo horizontal */ #14033a 0%,
-    /* início */ #140128 50%,
-    /* meio (roxo destaque) */ #052754 100% /* fim (azul) */
+    #14033a 0%,
+    #140128 50%,
+    #052754 100%
   );
 }
 
-/* IMAGEM */
+.section-icon,
 .main1section img {
-  width: 77px; /* controla tamanho */
-  height: 77px;
+  width: 56px;
+  height: 56px;
 }
 
-/* BLOCO DE TEXTO */
-.textSobre {
-  max-width: 500px; /* limita largura do texto */
+.textBlock {
+  max-width: 760px;
+  width: 100%;
+  text-align: center;
 }
 
 /* TÍTULOS */
-.textSobre h1 {
-  margin-bottom: 10px;
+.textSobre h1,
+.textProjeto h1 {
+  margin: 0;
+  font-size: 2.3rem;
+  letter-spacing: 0.02em;
 }
 
 /* AGRUPA ÍCONE + TÍTULO */
 .titulo-bloco {
-  display: flex; /* coloca lado a lado */
-  align-items: center; /* alinha verticalmente */
-  gap: 10px; /* espaço entre ícone e texto */
-  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  justify-content: center;
 }
 
-/* TAMANHO PADRÃO DOS ÍCONES */
-.icon {
-  width: 50px;
-  height: 50px;
-}
-
-/* remove margens padrão do h1 */
 .titulo-bloco h1 {
   margin: 0;
 }
 
-.textProjeto {
-  border-left: 1px solid rgba(255, 255, 255, 0.3); /* linha vertical */
-  padding-left: 30px; /* afasta o texto da linha */
+.section-divider {
+  width: 120px;
+  height: 2px;
+  background: #9c3cfb;
+  border-radius: 2px;
+  margin: 16px auto 24px;
 }
 
-/* PARÁGRAFOS */
-.textSobre p {
-  margin-bottom: 30px;
-  line-height: 1.5; /* melhora leitura */
+.textBlock p {
+  margin: 0 auto 24px;
+  line-height: 1.7;
+  max-width: 720px;
 }
 
-/* BLOCO DE TEXTO */
-.textProjeto {
-  max-width: 500px; /* limita largura do texto */
+.project-small-description {
+  color: #dcd7ff;
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 1rem;
 }
 
-/* TÍTULOS */
-.textProjeto h1 {
-  margin-bottom: 10px;
+.project-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(156, 60, 251, 0.25);
+  padding: 24px;
+  border-radius: 24px;
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.08), 0 16px 28px rgba(0, 0, 0, 0.2);
 }
 
-/* PARÁGRAFOS */
-.textProjeto p {
-  margin-bottom: 30px;
-  line-height: 1.5; /* melhora leitura */
+.project-logo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  background: rgba(28, 8, 58, 0.8);
+}
+
+.project-info {
+  max-width: 520px;
+  text-align: left;
+}
+
+.project-info h2 {
+  margin: 0 1rem 12px;
+  font-size: 1.6rem;
+}
+
+.project-info p {
+  margin: 0 1rem 12px;
+  line-height: 1.6;
+  color: #dcd7ff;
+  text-align: left;
 }
 
 /* ! SEÇÃO TECNOLOGIAS ! */
@@ -439,7 +491,7 @@ outline: 0;
 /* FOTO */
 .member img {
   width: 100px;
-  height: 80px;
+  height: 100px;
   border-radius: 50%; /* deixa circular */
   margin-bottom: 10px;
 }
