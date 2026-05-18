@@ -25,6 +25,13 @@ Abaixo o comando está dizendo pra o arquivo atual "styles.css" importar os arqu
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0px;
   font-family: 'Kulim Park', sans-serif;
@@ -545,12 +552,12 @@ outline: 0;
   .downHeader h1 {
     font-size: 1.8rem;
     text-align: center;
-    width: 200%;
+    max-width: 100%;
   }
   .downHeader p {
     font-size: 1.2rem;
     text-align: center;
-    width: 200%;
+    max-width: 100%;
   }
   title {
     display: none;
